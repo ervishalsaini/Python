@@ -324,15 +324,301 @@
  
 
 # 36. Write a Python script to check if a given key already exists in a dictionary. 
-x = {"a":1, "b":2 ,"c":3}
-check_key = "d"
-if check_key in x.keys():
-    print(f'The key {check_key} is present having value {x[check_key]}')
-else:
-    print("Not found")
+# x = {"a":1, "b":2 ,"c":3}
+# check_key = "d"
+# if check_key in x.keys():
+#     print(f'The key {check_key} is present having value {x[check_key]}')
+# else:
+#     print("Not found")
 
 
-  
+# 37. How Do You Traverse Through a Dictionary Object in Python? 
+# dict1 = {"a":1,"b":2,"c":3}
+# z = {y:x for x,y in dict1.items()}
+# print(z)
+
+
+# 38. Write a Python script to print a dictionary where the keys are numbers between 1 and 15. 
+# x = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225, 16: 256}
+# x_keys = [i for i in range(1,16)]
+# dict1 = {i:x[i] for i in x_keys}
+# print(dict1)
+
+
+# 40. Write a Python program to check multiple keys exists in a dictionary.
+# x = {"a":1,"b":2,"c":3}
+# keys_check = ["a","b","d"]
+# all_exist = all(i in x for i in keys_check)
+# if all_exist:
+#     print(f'The keys {keys_check} exist in the dictionary')
+# else:
+#     print(f'The keys {keys_check} not exist in the dictionary')
+
+
+# 41. Write a Python program to map two lists into a dictionary.
+# keys = ['a', 'b', 'c', 'd']
+# values = [400, 400, 300, 400]
+# result = dict((zip(keys,values))) 
+# print(result)
+# result = {keys[i]:values[i]   for i in range(len(keys))}
+# print(result)
+ 
+ 
+# 42. Write a Python program to find the highest 3 values in a dictionary.
+# x = {"a":1 , "b":2, "c":10, "d":22, "e": 4, "f":23, "g":27}
+# y = [i for i in x.values()]
+# z = sorted(y)[ : : -1][ : 3]
+# print(z)
+
+
+# 43. Write a Python program to combine values in python list of dictionaries. 
+# Sample data: [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 
+# 300}, o {'item': 'item1', 'amount': 750}] 
+# from collections import Counter
+# data = [
+#     {'item': 'item1', 'amount': 400},
+#     {'item': 'item2', 'amount': 300},
+#     {'item': 'item1', 'amount': 750}
+# ]
+# x = Counter()
+# for i in data:
+#     x[i['item']]+= i['amount']
+# print(x)
+
+
+# 44. )Write a Python program to create a dictionary from a string. 
+# Note: Track the count of the letters from the string.
+# string1 = "Hello Python"
+# x = {}
+# for i in string1:
+#     if i in x:
+#         x[i]+= 1
+#     else:
+#         x[i] = 1
+# print(x)
+
+
+# 45. Write a Python function to check whether a number is in a given range.
+# x = range(1,20)
+# number = int(input("Enter the Number : "))
+# if number in x:
+#     print("Number is in given range")
+# else:
+#     print("Number is not in range")
+
+
+# 46. Write a Python function to check whether a number is perfect or not. 
+# def perfect_number(n):
+#     sum = 0
+#     for i in range(1,n):
+#         if n%i == 0:
+#             sum+= i
+#     return sum == n
+# x = perfect_number(7)
+# print(x)
+
+
+# 47. Write a Python function that checks whether a passed string is palindrome or not.
+# def check(string1):
+#     x = string1[::-1]
+#     if x == string1:
+#         return True
+#     else:
+#         return False
+# string1 = "ABBA"
+# obj1 = check(string1)
+# print(obj1)
+
+
+# 48. How can you pick a random item from a list or tuple? 
+# import random
+# x = (1,2,3,4,5,1)
+# y = random.choice(x)
+# print(y)
+
+
+# 49. How can you pick a random item from a range? 
+# import random
+# x = random.randrange(1,100)
+# print(x)
+
+
+# 50. How can you get a random number in python?
+# import random
+# x = random.random()
+# print(x)
+    
+
+# 51. How will you set the starting value in generating random numbers?
+# import random
+# random.seed(1)
+# x = random.random()
+# print(x)
+
+
+# 52. How will you randomize the items of a list in place? 
+# import random
+# x = [1,2,3,4,1,2]
+# random.shuffle(x)
+# print(x)
+
+
+# 53. Write a Python program to read an entire text file.
+# f = open("C:/Users/admin/Desktop/Soft_Skills/module1.txt","r")
+# print(f.read())
+
+
+# 54. Write a Python program to append text to a file and display the text.
+# f = open("C:/Users/admin/Desktop/Soft_Skills/module1.txt","a") 
+# f.write("Good Morning Traders ")
+# f = open("C:/Users/admin/Desktop/Soft_Skills/module1.txt","r")
+# x = f.read()
+# print(x)
+# f.close()
+
+
+# 55. Write a Python program to read first n lines of a file.
+# input_file = "C:/Users/admin/Desktop/Soft_Skills/module1.txt"
+# N= int(input("Enter the number : "))
+# with open(input_file,"r") as f:
+#     x = f.readlines()
+# for i in x[:N]:
+#     print(i,end="")
+# f.close()
+
+
+# 56. Write a Python program to read last n lines of a file. 
+# input_file = "C:/Users/admin/Desktop/Soft_Skills/module1.txt"
+# N= int(input("Enter the number : "))
+# with open(input_file,"r") as f:
+#     x = f.readlines()
+# for i in x[-N:]:
+#     print(i,end="")
+# f.close()
+
+
+# 57. Write a Python program to read a file line by line and store it into a list
+# input_file = "C:/Users/admin/Desktop/Soft_Skills/module1.txt"
+# with open(input_file,"r") as f:
+#     x = f.readlines()
+# y = [i.strip() for i in x]
+# print(y)
+
+
+# 58. Write a Python program to read a file line by line store it into a variable.
+# input_file = "C:/Users/admin/Desktop/Soft_Skills/module1.txt"
+# with open(input_file,"r") as f:
+#     x = f.readlines()
+# count = 0
+# for i in x:
+#     count+= 1
+#     print("line{}:{}".format(count,i))
+
+
+# 59. Write a Python program to count the number of lines in a text file. 
+# input_file = "C:/Users/admin/Desktop/Soft_Skills/module1.txt"
+# with open(input_file,"r") as f:
+#     x = f.readlines()
+# count = 0
+# for i in x:
+#     count+= 1
+# print(f'The no of lines in given is {count}')
+
+
+# 60. Write a python program to find the longest words. 
+# def checks(text):
+#     x =text.split()
+#     max_len = len(max(x,key = len))
+#     return [i for i in x if len(i) == max_len]
+# text = "Good morning all hope you all are good"
+# obj1 = checks(text)
+# print(obj1)
+
+
+# 61. Write a Python program to count the frequency of words in a file.
+# from collections import Counter
+# import re
+# def frequencycheck(filename):
+#     with open(filename,"r") as f:
+#         x = f.read()
+#         y = re.findall(r'\b\w+\b', x.lower())
+#         z =Counter(y)
+#         return z
+# filename = "C:/Users/admin/Desktop/Soft_Skills/module1.txt"
+# obj1 = frequencycheck(filename)
+# for i,j in obj1.items():
+#     print(f'{i}:{j}')
+
+
+# 62. Write a Python program to write a list to a file. 
+# def writing(filename,list):
+#     with open(filename,"w") as f:
+#         for i in list:
+#             f.write(f"{i}\n")
+# list = ["apple","banana","cherry"]
+# filename = "C:/Users/admin/Desktop/Soft_Skills/module1.txt"
+# obj1 = writing(filename,list)
+# print(obj1)
+
+
+# 63. Write a Python program to copy the contents of a file to another file
+# def copy_file_contents(source_file, destination_file):
+#     with open(source_file, 'r') as src:
+#         with open(destination_file, 'w') as dest:
+#             for line in src:
+#                 dest.write(line)
+
+# source_file = 'source.txt'
+# destination_file = 'destination.txt'
+
+# copy_file_contents(source_file, destination_file)
+
+# print(f"Contents of {source_file} have been copied to {destination_file}")
+
+
+# 64. Write python program that user to enter only odd numbers, else will raise an exception. 
+# class NotOddNumberError(Exception):
+#    pass
+# def getoddnumbers():
+#     try:
+#        x = int(input("Enter the number : "))
+#        if x%2 == 0:
+#          raise NotOddNumberError("the number enter is not odd")
+#        print("You enter the odd number")
+#     except NotOddNumberError as e:
+#        print(e)
+
+# getoddnumbers()
+
+
+
+# 65. How Do You Handle Exceptions with Try/Except/Finally in Python? Explain with coding snippets. 
+def addition(a,b):
+    try:
+        z = (a+b)/(a-b)
+    except ZeroDivisionError:
+        print("Zero Division Error occured")
+    except TypeError:
+        print("Type Error")
+    else:
+        print(z)
+    finally:
+        print("You Get Your Result!!!")
+addition(10,"a")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
